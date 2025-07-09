@@ -120,3 +120,21 @@ clearIcon.addEventListener('click', () => {
   }
 });
 
+// При нажатии кнопки "Далее" на экране ввода
+document.querySelector('.next-btn').addEventListener('click', function() {
+  // Получаем введенный номер
+  const phoneNumber = document.getElementById('phone-input').value;
+  
+  // Устанавливаем номер в поле проверки
+  document.getElementById('displayed-phone').textContent = phoneNumber;
+  
+  // Переходим на экран проверки
+  showScreen('screen-checkphone');
+});
+
+// При возврате на экран ввода
+document.querySelector('.back-btn').addEventListener('click', () => {
+  document.getElementById('phone-input').value = 
+    document.getElementById('displayed-phone').textContent;
+  showScreen('screen-phone');
+});
