@@ -373,12 +373,61 @@ body {
   justify-content: center;
 }
 
+.screen-package-title {
+    position: absolute;
+    width: 925px;
+    height: 80px;
+    top: 126px;
+    left: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #101828;
+    opacity: 1;
+}
+
 #displayed-phone {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 45px;
   color: #0F172A;
   padding: 0 10px;
   width: 100%;
   text-align: center;
+}
+
+.posstamat4 {
+    position: absolute;
+    width: 330px;
+    height: 239px;
+    top: 217px;
+    left: 332px;
+}
+
+.destructive-icon {
+    width: 785px;
+    height: 85px;
+    position: absolute;
+    top: 466px;
+    left: 120px;
+}
+
+.holodomat {
+    width: 235;
+    height: 235;
+    top: 202px;
+    left: 392px;
+    angle: 0 deg;
+    opacity: 1;
+}
+
+.destructivealert-icon {
+    width: 517px;
+    height: 85px;
+    position: absolute;
+    top: 465px;
+    left: 259px;
 }

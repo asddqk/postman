@@ -70,7 +70,35 @@
 
 <!-- 3 экран проверки номера телефона -->
 <div id="screen-checkphone" class="screen">
+    <button class="btn back-btn">
+        <span>&larr;</span> Назад
+    </button>
 
+    <div class="problem-bar">
+        <img src="Group.svg" alt="Иконка проблемы" class="problem-icon">
+        <span class="problem-text">У меня проблема</span>
+    </div>
+
+    <div class="phone-check-title">Проверьте, что ввели номер правильно</div>
+
+    <!-- Основной контейнер для отображения номера -->
+    <div class="phone-number-display">
+        <span id="displayed-phone">+7 (XXX) XXX-XX-XX</span>
+    </div>
+
+    <div class="check-buttons-container">
+        <button class="mistake-btn">
+            Ошибка в номере
+        </button>
+    
+        <button class="correct-btn">
+            Верно
+        </button>
+    </div>
+</div>
+
+<!-- 4 экран положить посылку -->
+<div id="screen-package" class="screen">
     <button class="btn back-btn">
         <span>&larr;</span> Назад
     </button>
@@ -81,27 +109,40 @@
     </div>
 
 
-    <div class="phone-check-title">Проверьте, что ввели номер правильно</div>
+    <div class="screen-package-title">Положите посылку в открытую ячейку.<br>После помещения посылки в ячейку, закройте ячейку</div>
 
-    <div class="check-buttons-container">
-        <button class="mistake-btn">
-            Ошибка в номере
-        </button>
-    
-        <button class="correct-btn">
-            Верно
-        </button>
-  </div>
+    <img src="posstamat4.svg" alt="Постамат" class="posstamat4" />
 
-  <div class="phone-display">
-    <span id="displayed-phone">+7 (XXX) XXX-XX-XX</span>
-  </div>
-
-<div class="phone-number-display">  <!-- Новый класс -->
-  <span id="displayed-phone">+7 (XXX) XXX-XX-XX</span>
-</div>
+    <img src="destructive.svg" alt="Внимание" class="destructive-icon" />
 
 </div>
+
+<!-- 5 экран код для получения посылки-->
+<div id="сode" class="screen">
+    <button class="btn back-btn">
+        <span>&larr;</span> Назад
+    </button>
+
+    <div class="problem-bar">
+        <img src="Group.svg" alt="Иконка проблемы" class="problem-icon">
+        <span class="problem-text">У меня проблема</span>
+    </div>
+
+
+    <div class="code-title">Код для получения будет отправлен вам в СМС<br>после досмотра медицинским персоналом</div>
+
+    <img src="image-2.svg" alt="холодомат" class="holodomat" />
+
+    <img src="destructivealert.svg" alt="Внимание!" class="destructivealert-icon" />
+
+</div>
+
+<!-- 6 экран код для получения-->
+<!-- 7 экран все ячейки заняты-->
+
+<!-- 8 экран у меня проблема-->
+
+
     <script src="scripts.js"></script>
 </body>
 </html>
