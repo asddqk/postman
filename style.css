@@ -268,3 +268,42 @@ body {
   opacity: 1;
 }
 
+.problem-bar {
+    background-color: transparent !important;
+  position: absolute;
+  top: 52px;          /* Позиция сверху */
+  right: 50px;        /* Позиция справа */
+  display: flex;
+  align-items: center;
+  gap: 12px;          /* Расстояние между иконкой и текстом */
+  white-space: nowrap; /* Запрет переноса текста */
+}
+
+.problem-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 50px;      /* Убираем большой line-height */
+  color: #0AB69C;
+}
+.problem-icon {
+  width: 24px; /* Ширина иконки */
+  height: 24px; /* Высота иконки */
+}
+
+.phone-check-title {
+  position: absolute;
+  width: 748px;
+  height: 50px;
+  top: 200px;
+  left: 138px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #101828;
+  opacity: 1;
+  /* leading-trim не поддерживается в CSS, используем line-height */
+}
