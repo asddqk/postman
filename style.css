@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: sans-serif;
+  width: 1024px;
+  height: 600px;
+  overflow: hidden;
+  position: relative; /* добавил, чтобы absolute внутри работал корректно */
+}
+
+.screen {
+  width: 1024px;
+  height: 600px;
+  position: absolute; /* чтобы экраны накладывались друг на друга */
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 40px;
+  box-sizing: border-box;
+  display: none; /* скрываем все экраны по умолчанию */
+}
+
+/* Показывать активный экран */
+.screen.active {
+  display: block;
+}
+
+/* Логотип в левом верхнем углу */
+.icon-pp {
+  position: absolute;
+  top: 62px;
+  left: 50px;
+  width: 65px;
+  height: 65px;
+}
+
+/* Логотип по центру */
+.logo {
+  position: absolute;
+  top: 58px;
+  left: 425px;
+  width: 174px;
+  height: 72px;
+}
+
+/* Группа кнопок */
+.button-group {
+  position: absolute;
+  top: 203px;
+  left: 237px;
+  width: 550px;
+  height: 325px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+/* Индикатор посылок */
+.indicator {
+  position: absolute;
+  top: 83px;
+  left: 951px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #00cc66; /* зелёный по умолчанию */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Сами кнопки */
+.main-btn {
+  width: 100%;
+  height: 150px;
+  background-color: #0AB69C;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.main-btn:hover {
+  background-color: #099e89;
+}
+
+/* Стили для экрана ввода телефона */
+
+#screen-phone h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.phone-input {
+  font-size: 32px;
+  padding: 20px;
+  width: 500px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* Кнопки Назад и Далее */
+.btn {
+  position: absolute;
+  width: 133px;
+  height: 53px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.back-btn {
+  top: 50px;
+  left: 50px;
+  border: 2px solid #0AB69C;
+  background: white;
+  color: #0AB69C;
+}
+
+.next-btn {
+  top: 50px;
+  left: 841px;
+  background: #0AB69C;
+  color: white;
+}
+
+/* Заголовок */
+.phone-title {
+  position: absolute;
+  top: 28px;
+  left: 282px;
+  width: 461px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  color: #0F172A;
+  white-space: nowrap;
+}
+
+/* Поле ввода */
+.phone-input {
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  width: 385px;
+  height: 64px;
+  font-size: 28px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Клавиатура */
+.keypad {
+  position: absolute;
+  top: 215px;
+  left: 404px;
+  width: 217px;
+  height: 283px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.key {
+  font-size: 24px;
+  padding: 15px;
+  background: #F7F7F7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.key.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+/* Нижний блок */
+.consent-bar {
+  position: absolute;
+  bottom: 0;
+  width: 1024px;
+  height: 77px;
+  background-color: #0AB69C;
+  color: white;
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  text-align: center;
+  gap: 12px;
+}
+
+.problem-bar {
+    position: absolute;
+    bottom: 52px;
+    width: 197px;
+    height: 50px;
+    left: 778px;
+    background-color: #0AB69C;
+    color: white;
+    font-size: 24px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 80px;
+    box-sizing: border-box;
+    text-align: center; 
+    gap: 12px;
+}
+
+.info-icon {
+  width: 32px;
+  height: 36px;
+}
+
+.phone-input-wrapper {
+  position: absolute;
+  top: 133px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 385px;
+  height: 64px;
+}
+
+.clear-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.clear-icon:hover {
+  opacity: 1;
+}
+

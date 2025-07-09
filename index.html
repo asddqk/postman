@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Продуктомат</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+    
+  <!-- Главный экран -->
+<div id="screen-welcome" class="screen screen-welcome active">
+    <img src="img/pp.svg" alt="PP" class="icon-pp" />
+    <img src="img/logo.svg" alt="Логотип" class="logo" />
+
+    <div class="button-group">
+      <button class="main-btn" onclick="showScreen('screen-phone')">Положить посылку</button>
+      <button class="main-btn">Забрать посылку</button>
+    </div>
+
+    <div id="parcel-indicator" class="indicator"></div>
+  </div>
+
+  <!-- Экран ввода телефона -->
+<div id="screen-phone" class="screen">
+  <button class="btn back-btn">
+    <span>&larr;</span> Назад
+  </button>
+
+  <button class="btn next-btn">
+    Далее <span>&rarr;</span>
+  </button>
+
+  <p class="phone-title">Введите свой номер телефона</p>
+
+<!--  <div class="phone-input-wrapper">
+  <input type="text" class="phone-input" placeholder="+7 (___) ___-__-__" readonly />
+  <img src="/Users/asddqk/Desktop/дисплей/Vector.svg" alt="Удалить" class="clear-icon" />
+</div>
+-->
+
+<div class="phone-input-wrapper">
+  <input type="text" id="phone-input" class="phone-input" placeholder="+7 (___) ___-__-__">
+  <img id="clear-icon" class="clear-icon" src="Vector.svg" alt="Очистить" style="display: none;">
+</div>
+
+  <div class="keypad">
+    <button class="key">1</button>
+    <button class="key">2</button>
+    <button class="key">3</button>
+    <button class="key">4</button>
+    <button class="key">5</button>
+    <button class="key">6</button>
+    <button class="key">7</button>
+    <button class="key">8</button>
+    <button class="key">9</button>
+    <div class="key empty"></div>
+    <button class="key">0</button>
+    <div class="key empty"></div>
+  </div>
+
+  <div class="consent-bar">
+    <img src="Icon Container.svg" alt="info" class="info-icon">
+    <p>
+      Вводя свой номер телефона, вы автоматически соглашаетесь с правилами пользования сервисом и даёте своё согласие на обработку персональных данных
+    </p>
+  </div>
+</div>
+
+
+<!-- экран проверки номера телефона -->
+<div id="screen-checkphone" class="screen">
+
+    <button class="btn back-btn">
+        <span>&larr;</span> Назад
+    </button>
+
+<div class="problem-bar"></div>
+    <img src="Icon Container.svg" alt="info" class="info-icon">
+    <p>У меня проблема</p>
+  </div>
+</div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
