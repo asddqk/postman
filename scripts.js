@@ -13,7 +13,11 @@ function showScreen(screenId, rememberHistory = true) {
   document.querySelectorAll('.screen').forEach(el => {
     el.classList.remove('active');
   });
-  document.getElementById(screenId)?.classList.add('active');
+  
+  const nextScreen = document.getElementById(screenId);
+  if (nextScreen) {
+    nextScreen.classList.add('active');
+  }
 }
 
 // Инициализация ввода телефона
@@ -66,12 +70,20 @@ function initEventHandlers() {
   // Универсальная кнопка "Назад"
   document.querySelectorAll('.back-btn').forEach(btn => {
     btn.addEventListener('click', handleBackButton);
+  });
 
-//переход по кнопке верно 3->4
-    document.querySelector('.correct-btn')?.addEventListener('click', function() {
-        // Можно добавить дополнительную логику перед переходом
-        showScreen('screen-package');
-});
+  // Обработчик для кнопки "Верно"
+  document.querySelector('.correct-btn')?.addEventListener('click', function() {
+    showScreen('screen-package');
+  });
+
+  // Обработчик для кнопки "У меня проблема" (ВЫНЕСЕН ОТДЕЛЬНО)
+  document.querySelectorAll('.problem-button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      showScreen('screen-problems');
+    });
   });
 
   // Кнопка "Далее"
@@ -85,10 +97,22 @@ function initEventHandlers() {
     }
   });
 
-  // Кнопка "Ошибка в номере" - сохраняем номер при возврате
+  // Кнопка "Ошибка в номере"
   document.querySelector('.mistake-btn')?.addEventListener('click', () => {
-    // Не очищаем digits, чтобы номер сохранился
     showScreen('screen-phone');
+  });
+
+  //ячейка грязная
+  document.querySelector('.problem-button-1')?.addEventListener('click', () => {
+    showScreen('screen1-problems');
+  });
+  //ячейка сломана, другое
+  document.querySelector('.problem-button-2')?.addEventListener('click', () => {
+    showScreen('screen2-problems');
+  });
+    //ячейка сломана, другое
+  document.querySelector('.problem-button-3')?.addEventListener('click', () => {
+    showScreen('screen2-problems');
   });
 }
 
@@ -102,7 +126,15 @@ function handleBackButton() {
 
 // Запуск при загрузке
 document.addEventListener('DOMContentLoaded', () => {
+  // Сначала скрываем все экраны
+  document.querySelectorAll('.screen').forEach(el => {
+    el.classList.remove('active');
+  });
+  
+  // Показываем только welcome-экран
+  document.getElementById('screen-welcome').classList.add('active');
+  
+  // Инициализируем остальное
   initPhoneInput();
   initEventHandlers();
-  showScreen('screen-welcome');
 });

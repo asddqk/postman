@@ -268,29 +268,6 @@ body {
   opacity: 1;
 }
 
-.problem-bar {
-    background-color: transparent !important;
-  position: absolute;
-  top: 52px;          /* Позиция сверху */
-  right: 50px;        /* Позиция справа */
-  display: flex;
-  align-items: center;
-  gap: 12px;          /* Расстояние между иконкой и текстом */
-  white-space: nowrap; /* Запрет переноса текста */
-}
-
-.problem-text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 50px;      /* Убираем большой line-height */
-  color: #0AB69C;
-}
-.problem-icon {
-  width: 24px; /* Ширина иконки */
-  height: 24px; /* Высота иконки */
-}
-
 .phone-check-title {
   position: absolute;
   width: 748px;
@@ -430,4 +407,93 @@ body {
     position: absolute;
     top: 465px;
     left: 259px;
+}
+
+.problem-button {
+  position: absolute;
+  top: 52px;
+  right: 50px;
+  width: 200px; /* подбери под размер изображения */
+  height: auto;
+  cursor: pointer;
+}
+
+/* Стили экрана проблем */
+#screen-problems {
+    display: none !important;
+}
+
+#screen-problems.active {
+    display: block !important;
+}
+.problem-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.problem-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #0F172A;
+}
+
+.problem-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* центрирует по горизонтали */
+    justify-content: center;  /* центрирует по вертикали (если контейнер высокий) */
+    gap: 10px;
+    margin: 0 auto;  /* автоматические отступы по бокам */
+    padding: 20px;  /* внутренние отступы */
+    width: 100%;  /* растягивает на всю ширину родителя */
+    max-width: 800px;  /* ограничивает максимальную ширину */
+}
+
+.problem-options img {
+    width: 700px;  /* адаптируется под ширину контейнера */
+    height: 130px;  /* сохраняет пропорции */
+    object-fit: contain;  /* гарантирует, что изображение не обрежется */
+    cursor: pointer;
+}
+
+.problemans-header {
+    position: absolute;
+    width: 925px;
+    height: 80px;
+    top: 80px;
+    left: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #101828;
+    opacity: 1;
+}
+.dver-icon{
+     position: absolute;
+    width: 330px;
+    height: 239px;
+    top: 217px;
+    left: 332px;
+}
+.zvonki-icon{
+    position: absolute;
+    width: 330px;
+    height: 239px;
+    top: 217px;
+    left: 332px;
+}
+
+.problem1-title{
+    width: 925px;
+height: 100px;
+top: 158px;
+left: 50px;
+angle: 0 deg;
+opacity: 1;
+
 }

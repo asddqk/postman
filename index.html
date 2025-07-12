@@ -74,10 +74,7 @@
         <span>&larr;</span> Назад
     </button>
 
-    <div class="problem-bar">
-        <img src="Group.svg" alt="Иконка проблемы" class="problem-icon">
-        <span class="problem-text">У меня проблема</span>
-    </div>
+    <img src="Problem.svg" alt="У меня проблема" class="problem-button">
 
     <div class="phone-check-title">Проверьте, что ввели номер правильно</div>
 
@@ -103,10 +100,7 @@
         <span>&larr;</span> Назад
     </button>
 
-    <div class="problem-bar">
-        <img src="Group.svg" alt="Иконка проблемы" class="problem-icon">
-        <span class="problem-text">У меня проблема</span>
-    </div>
+    <img src="Problem.svg" alt="У меня проблема" class="problem-button">
 
 
     <div class="screen-package-title">Положите посылку в открытую ячейку.<br>После помещения посылки в ячейку, закройте ячейку</div>
@@ -123,11 +117,7 @@
         <span>&larr;</span> Назад
     </button>
 
-    <div class="problem-bar">
-        <img src="Group.svg" alt="Иконка проблемы" class="problem-icon">
-        <span class="problem-text">У меня проблема</span>
-    </div>
-
+    <img src="Problem.svg" alt="У меня проблема" class="problem-button">
 
     <div class="code-title">Код для получения будет отправлен вам в СМС<br>после досмотра медицинским персоналом</div>
 
@@ -141,8 +131,49 @@
 <!-- 7 экран все ячейки заняты-->
 
 <!-- 8 экран у меня проблема-->
+<div id="screen-problems" class="screen">
+    <button class="btn back-btn">
+        <span>&larr;</span> Назад
+    </button>
 
+    <div class="problem-header">
+        <h2 class="problem-title">Какая у вас проблема?</h2>
+    </div>
 
+    <div class="problem-options">
+        <img src="pr1.svg" alt="probl1" class="problem-button-1">
+        <img src="pr2.svg" alt="probl3" class="problem-button-2">
+        <img src="pr3.svg" alt="probl3" class="problem-button-3">
+    </div>
+</div>
+
+<!-- 9 экран ответ на проблемк-->
+<div id="screen1-problems" class="screen">
+    <button class="btn back-btn">
+        <span>&larr;</span> Назад
+    </button>
+
+    <div class="problemans-header">
+        <h2 class="problem1-title">Спасибо, что сообщили.<br>Сейчас откроется другая ячейка</h2>
+    </div>
+
+    <img src="dver.svg" alt="door" class="dver-icon" />
+
+</div>
+
+<!-- 10 экран ответ на проблемк-->
+<div id="screen2-problems" class="screen">
+    <button class="btn back-btn">
+        <span>&larr;</span> Назад
+    </button>
+
+    <div class="problemans-header">
+        <h2 class="problem2-title">Свяжитесь с оператором по номеру</h2>
+    </div>
+    
+    <img src="zvonki.svg" alt="calls" class="zvonki-icon" />
+
+</div>
     <script src="scripts.js"></script>
 </body>
 </html>
